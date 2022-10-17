@@ -17,7 +17,6 @@ const removeSelectedItem = () => {
   const getRmvBtn = document.getElementById('remover-selecionado');
   getRmvBtn.addEventListener('click', () => {
     for (let i = 0; i < getList.length; i += 1) {
-      console.log(getList[i]);
       if (getList[i].style.backgroundColor === 'gray') {
         getOl.removeChild(getList[i]);
       }
@@ -96,7 +95,6 @@ const saveTasks = () => {
       };
 
       tasksDb.push(tasks);
-      console.log(tasks);
     }
     localStorage.setItem('tasks', JSON.stringify(tasksDb));
   });
@@ -147,40 +145,41 @@ const verifyColour = () => {
 };
 
 // Mover elemento para cima
+
+const handleUp = () => {
+  verifyColour();
+  const bgGray = grayItem.style.backgroundColor === 'gray';
+  const firstItem = grayItem.previousSibling !== null;
+
+  if (!grayItem) return null;
+
+  if (bgGray && firstItem
+  ) return verifyFirstIsGray(grayItem, grayItem.previousElementSibling);
+  return null;
+};
+
 const moveUp = () => {
   const getMvUpBtn = document.getElementById('mover-cima');
 
-  getMvUpBtn.addEventListener('click', () => {
-    verifyColour();
+  getMvUpBtn.addEventListener('click', handleUp);
+};
 
-    if (grayItem === undefined) {
-      return null;
-    }
+const handleDown = () => {
+  verifyColour();
+  const bgGray = grayItem.style.backgroundColor === 'gray';
+  const lastItem = grayItem.nextSibling !== null;
 
-    if (
-      grayItem.style.backgroundColor === 'gray' && grayItem.previousElementSibling !== null
-    ) {
-      verifyFirstIsGray(grayItem, grayItem.previousElementSibling);
-    }
-  });
+  if (!grayItem) return null;
+
+  if (bgGray && lastItem
+  ) return verifyFirstIsGray(grayItem, grayItem.nextElementSibling);
+  return null;
 };
 
 const moveDown = () => {
   const getMvUpBtn = document.getElementById('mover-baixo');
 
-  getMvUpBtn.addEventListener('click', () => {
-    verifyColour();
-
-    if (grayItem === undefined) {
-      return null;
-    }
-
-    if (
-      grayItem.style.backgroundColor === 'gray' && grayItem.nextElementSibling !== null
-    ) {
-      verifyFirstIsGray(grayItem, grayItem.nextElementSibling);
-    }
-  });
+  getMvUpBtn.addEventListener('click', handleDown);
 };
 
 renderSavedTasks();

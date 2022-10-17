@@ -1,0 +1,28 @@
+{
+  "name": "projeto-04-todo-list",
+  "version": "1.0.0",
+  "description": "![Project To Do List](./todolist.png)",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aysllanferreira/Projeto-04-ToDo-List.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aysllanferreira/Projeto-04-ToDo-List/issues"
+  },
+  "homepage": "https://github.com/aysllanferreira/Projeto-04-ToDo-List#readme",
+  "dependencies": {
+    "sass": "^1.55.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
