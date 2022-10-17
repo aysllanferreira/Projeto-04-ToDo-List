@@ -1,4 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #EAD7D1;
+  font-family: 'Lobster', cursive;
+}
+
 .completed {
     text-decoration: line-through solid black;
   }
-  
+
+header{
+  color: #1F1A38;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 50px;
+}
+
+#box{
+  color: #1F1A38;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#box p {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#box input {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #7B506F;
+    border-radius: 10px;
+}
+
+#inputs{
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  margin: 0 auto;
+  gap: 25px;
+}
+
+#inputs button {
+  background-color: #DD99BB;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: 'Lobster', cursive;
+}
+
+#inputs button:hover{
+  background-color: #7B506F;
+}
+
+#lista-tarefas{
+  margin: 0 auto;
+  width: 400px;
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 25px;
+}

@@ -4,23 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>toDo List</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>Minha Lista de Tarefas</header>
-    <p id="funcionamento">
-      Clique duas vezes em um item para marcá-lo como completo
-    </p>
-    <input type="text" id="texto-tarefa" /><br /><br />
-    <button id="criar-tarefa">Criar tarefa</button>
-    <button id="apaga-tudo">Apagar</button>
-    <button id="remover-finalizados">Remover Finalizados</button>
-    <button id="salvar-tarefas">Salvar</button>
-    <button id="mover-cima">Mover acima</button>
-    <button id="mover-baixo">Mover abaixo</button>
-    <button id="remover-selecionado">Remover Selecionado</button>
-    <ol id="lista-tarefas"></ol>
+    <section id="header">
+      <header>Minha Lista de Tarefas</header>
+    </section>
+
+    <section id="box">
+      <p id="funcionamento">
+        Clique duas vezes em um item para marcá-lo como completo
+      </p>
+      <input type="text" id="texto-tarefa" /><br /><br />
+    </section>
+
+    <section id="inputs">
+      <button id="criar-tarefa">Adicionar Item</button>
+      <button id="apaga-tudo">Apagar Tudo</button>
+      <button id="remover-finalizados">Remover Finalizados</button>
+      <button id="salvar-tarefas">Salvar Tarefas</button>
+      <button id="mover-cima">Mover para Cima</button>
+      <button id="mover-baixo">Mover para Baixo</button>
+      <button id="remover-selecionado">Remover Selecionado</button>
+    </section>
+
+    <ul id="lista-tarefas"></ul>
     <script src="./script.js"></script>
   </body>
 </html>

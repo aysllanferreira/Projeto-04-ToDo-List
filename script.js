@@ -6,8 +6,8 @@ let grayItem;
 // Verifica se existe algum elemento coma cor cinza, e transforma em branco.
 const verifyWhosGray = () => {
   for (let i = 0; i < getList.length; i += 1) {
-    if (getList[i].style.backgroundColor === 'gray') {
-      getList[i].style.backgroundColor = 'white';
+    if (getList[i].style.backgroundColor === 'rgb(123, 80, 111)') {
+      getList[i].style.backgroundColor = 'rgb(234, 215, 209)';
     }
   }
 };
@@ -17,7 +17,7 @@ const removeSelectedItem = () => {
   const getRmvBtn = document.getElementById('remover-selecionado');
   getRmvBtn.addEventListener('click', () => {
     for (let i = 0; i < getList.length; i += 1) {
-      if (getList[i].style.backgroundColor === 'gray') {
+      if (getList[i].style.backgroundColor === 'rgb(123, 80, 111)') {
         getOl.removeChild(getList[i]);
       }
     }
@@ -29,7 +29,7 @@ const greyAtClick = () => {
   for (let i = 0; i < getList.length; i += 1) {
     getList[i].addEventListener('click', () => {
       verifyWhosGray();
-      getList[i].style.backgroundColor = 'gray';
+      getList[i].style.backgroundColor = 'rgb(123, 80, 111)';
       removeSelectedItem();
     });
   }
@@ -138,7 +138,7 @@ const verifyFirstIsGray = (itemAcima, vizinho) => {
 
 const verifyColour = () => {
   for (let i = 0; i < getList.length; i += 1) {
-    if (getList[i].style.backgroundColor === 'gray') {
+    if (getList[i].style.backgroundColor === 'rgb(123, 80, 111)') {
       grayItem = getList[i];
     }
   }
@@ -148,7 +148,7 @@ const verifyColour = () => {
 
 const handleUp = () => {
   verifyColour();
-  const bgGray = grayItem.style.backgroundColor === 'gray';
+  const bgGray = grayItem.style.backgroundColor === 'rgb(123, 80, 111)';
   const firstItem = grayItem.previousSibling !== null;
 
   if (!grayItem) return null;
@@ -166,7 +166,7 @@ const moveUp = () => {
 
 const handleDown = () => {
   verifyColour();
-  const bgGray = grayItem.style.backgroundColor === 'gray';
+  const bgGray = grayItem.style.backgroundColor === 'rgb(123, 80, 111)';
   const lastItem = grayItem.nextSibling !== null;
 
   if (!grayItem) return null;
